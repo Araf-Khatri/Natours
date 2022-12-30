@@ -1078,6 +1078,7 @@ body {
 
 .card-container {
   max-width: 120rem;
+  min-width: 115rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1228,7 +1229,8 @@ body {
   margin: 0 auto;
 }
 
-.login-form, .signup-form {
+.login-form,
+.signup-form {
   margin: 0 auto;
   max-width: 55rem;
   background-color: #fff;
