@@ -18,7 +18,6 @@ const bookBtn = document.getElementById('book-tour');
 // DELEGATION
 if (leaflet) {
   const locations = JSON.parse(leaflet.dataset.locations);
-  console.log(locations);
   displayMap(locations);
 }
 
