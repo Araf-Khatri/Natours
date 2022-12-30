@@ -1080,9 +1080,10 @@ body {
   max-width: 120rem;
   min-width: 115rem;
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 7rem;
+  gap: 7rem;
 }
 
 .card {
