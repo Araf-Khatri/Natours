@@ -1,3 +1,5 @@
+// Dummy file .ignore
+
 // const fs = require('fs');
 const Tour = require('./models/tourModel');
 const APIFeatures = require('./utils/apiFeatures');

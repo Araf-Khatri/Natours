@@ -4,17 +4,17 @@ import 'core-js';
 import displayMap from './leaflet';
 import { updateSettings } from './updateSettings';
 import { bookTour } from './stripe';
-import { accountForm,  logout} from './accountform';
+import { accountForm, logout } from './accountform';
 // DOM ELEMENTS
+// const loginForm = document.querySelector('.form--login');
 const leaflet = document.getElementById('map');
-
 const form = document.querySelector('.form--login');
-const loginForm = document.querySelector('.form--login');
+const accountOnMobile = document.querySelector('.account__el');
 const logOutBtn = document.querySelector('.nav__el--logout');
 const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
 const bookBtn = document.getElementById('book-tour');
-
+const accountBtn = document.querySelector('.account .nav__el--logout');
 // DELEGATION
 if (leaflet) {
   const locations = JSON.parse(leaflet.dataset.locations);
@@ -35,10 +35,10 @@ if (form) {
 
     data.email = document.getElementById('email').value;
     data.password = document.getElementById('password').value;
-    
-    document.querySelector('.btn--green').textContent = 'Please wait...'
+
+    document.querySelector('.btn--green').textContent = 'Please wait...';
     await accountForm(data, type);
-    document.querySelector('.btn--green').textContent = type
+    document.querySelector('.btn--green').textContent = type;
   });
 }
 
@@ -54,6 +54,10 @@ if (form) {
 
 if (logOutBtn) {
   logOutBtn.addEventListener('click', logout);
+}
+
+if (accountBtn) {
+  accountBtn.addEventListener('click', logout);
 }
 
 if (userDataForm) {
@@ -99,5 +103,14 @@ if (bookBtn) {
     e.target.textContent = 'Processing...';
     const { tourId } = e.target.dataset;
     bookTour(tourId);
+  });
+}
+
+console.log(accountOnMobile);
+if (accountOnMobile) {
+  accountOnMobile.addEventListener('click', (e) => {
+    const accountEl = document.querySelector('.account__el--page');
+    console.log(accountEl);
+    accountEl.classList.toggle('hidden');
   });
 }
