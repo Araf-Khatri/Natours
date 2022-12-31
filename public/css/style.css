@@ -186,7 +186,6 @@ body {
 .btn,
 .btn:link,
 .btn:visited {
-  width: 100%;
   font-size: 1.6rem;
   padding: 1.4rem 3rem;
   border-radius: 0.5rem;
@@ -202,6 +201,9 @@ body {
   /*Add later when we use this for the button in form*/
   border: none;
   cursor: pointer;
+}
+.btn--account {
+  width: 100%;
 }
 
 .btn:hover {
@@ -1362,8 +1364,9 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
+
 @media (max-width: 30rem) {
-  .btn {
+  .btn--account {
     font-size: 1rem;
     width: 100%;
   }
