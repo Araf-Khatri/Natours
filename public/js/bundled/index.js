@@ -691,10 +691,8 @@ if (bookBtn) bookBtn.addEventListener("click", (e)=>{
     const { tourId  } = e.target.dataset;
     (0, _stripe.bookTour)(tourId);
 });
-console.log(accountOnMobile);
 if (accountOnMobile) accountOnMobile.addEventListener("click", (e)=>{
     const accountEl = document.querySelector(".account__el--page");
-    console.log(accountEl);
     accountEl.classList.toggle("hidden");
 });
 

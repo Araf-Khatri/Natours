@@ -106,11 +106,9 @@ if (bookBtn) {
   });
 }
 
-console.log(accountOnMobile);
 if (accountOnMobile) {
   accountOnMobile.addEventListener('click', (e) => {
     const accountEl = document.querySelector('.account__el--page');
-    console.log(accountEl);
     accountEl.classList.toggle('hidden');
   });
 }
