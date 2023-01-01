@@ -10,10 +10,16 @@ exports.getOverview = catchAsync(async (req, res, next) => {
 
   // 2) Build template
   // 3) Render that template useing tour data from 1
-  res.status(200).render('overview', {
-    title: 'All Tours',
-    tours,
-  });
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;"
+    )
+    .render('overview', {
+      title: 'All Tours',
+      tours,
+    });
 });
 
 exports.getTour = catchAsync(async (req, res, next) => {
