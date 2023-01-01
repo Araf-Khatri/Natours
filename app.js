@@ -9,6 +9,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
+const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -27,7 +28,21 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views')); // ->> we telling express that, this is the folder we want to look for pug files
 // same as ./views but using 'path' module is better
 
-// ->> GLOBAL Middleware
+// ->> ->> /// GLOBAL Middleware ///
+
+// ->> Implement CORS
+app.use(cors());
+// set Access-Control-Allow-Origin header to * (all requests)
+// api.natours.com, frontend: natours.app.io
+// app.use(
+//   cors({
+//     origin: 'https://natours-production-461c.up.railway.app',
+//     // this will be able to req to 'api.natours.com' too
+//   })
+// );
+
+app.options('*', cors());
+// app.options('/api/v1/tours/:id', cors());
 
 // Serving static files
 // app.use(express.static(`${__dirname}/public`));
