@@ -15,6 +15,8 @@ const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
 const bookBtn = document.getElementById('book-tour');
 const accountBtn = document.querySelector('.account .nav__el--logout');
+const profileMenuBtn = document.querySelector('.profile-menu');
+
 // DELEGATION
 if (leaflet) {
   const locations = JSON.parse(leaflet.dataset.locations);
@@ -111,4 +113,12 @@ if (accountOnMobile) {
     const accountEl = document.querySelector('.account__el--page');
     accountEl.classList.toggle('hidden');
   });
+}
+
+console.log('clicked')
+if (profileMenuBtn) {
+  profileMenuBtn.addEventListener('click', () => {
+    const menu = document.querySelector('.user-view__menu')
+    menu.classList.toggle('user-menu-active')
+  })
 }

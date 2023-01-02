@@ -629,6 +629,7 @@ const userDataForm = document.querySelector(".form-user-data");
 const userPasswordForm = document.querySelector(".form-user-password");
 const bookBtn = document.getElementById("book-tour");
 const accountBtn = document.querySelector(".account .nav__el--logout");
+const profileMenuBtn = document.querySelector(".profile-menu");
 // DELEGATION
 if (leaflet) {
     const locations = JSON.parse(leaflet.dataset.locations);
@@ -694,6 +695,11 @@ if (bookBtn) bookBtn.addEventListener("click", (e)=>{
 if (accountOnMobile) accountOnMobile.addEventListener("click", (e)=>{
     const accountEl = document.querySelector(".account__el--page");
     accountEl.classList.toggle("hidden");
+});
+console.log("clicked");
+if (profileMenuBtn) profileMenuBtn.addEventListener("click", ()=>{
+    const menu = document.querySelector(".user-view__menu");
+    menu.classList.toggle("user-menu-active");
 });
 
 },{"core-js/modules/es.regexp.flags.js":"k7rsR","core-js/modules/es.typed-array.set.js":"5l6t0","core-js/modules/esnext.aggregate-error.js":"65T9m","core-js/modules/esnext.array.last-index.js":"ePRQz","core-js/modules/esnext.array.last-item.js":"jTX3Q","core-js/modules/esnext.composite-key.js":"cTG6r","core-js/modules/esnext.composite-symbol.js":"jbJZK","core-js/modules/esnext.map.delete-all.js":"exbdH","core-js/modules/esnext.map.every.js":"7vHrx","core-js/modules/esnext.map.filter.js":"inG3Z","core-js/modules/esnext.map.find.js":"dDhVH","core-js/modules/esnext.map.find-key.js":"iIdDu","core-js/modules/esnext.map.from.js":"h48Bm","core-js/modules/esnext.map.group-by.js":"jYUG8","core-js/modules/esnext.map.includes.js":"iWIOl","core-js/modules/esnext.map.key-by.js":"l8YnZ","core-js/modules/esnext.map.key-of.js":"hvVTT","core-js/modules/esnext.map.map-keys.js":"6Tlqb","core-js/modules/esnext.map.map-values.js":"l1Y02","core-js/modules/esnext.map.merge.js":"gTA2Z","core-js/modules/esnext.map.of.js":"dbPsY","core-js/modules/esnext.map.reduce.js":"kM3ji","core-js/modules/esnext.map.some.js":"dS8F9","core-js/modules/esnext.map.update.js":"kGFXZ","core-js/modules/esnext.math.clamp.js":"aCXQD","core-js/modules/esnext.math.deg-per-rad.js":"3wfy9","core-js/modules/esnext.math.degrees.js":"hyeQU","core-js/modules/esnext.math.fscale.js":"gMb8V","core-js/modules/esnext.math.iaddh.js":"274Ut","core-js/modules/esnext.math.imulh.js":"1U6ff","core-js/modules/esnext.math.isubh.js":"ggQeE","core-js/modules/esnext.math.rad-per-deg.js":"e69uP","core-js/modules/esnext.math.radians.js":"iSGbP","core-js/modules/esnext.math.scale.js":"9B9Xy","core-js/modules/esnext.math.seeded-prng.js":"bPxdQ","core-js/modules/esnext.math.signbit.js":"9GhKf","core-js/modules/esnext.math.umulh.js":"apGJ6","core-js/modules/esnext.number.from-string.js":"b9bLm","core-js/modules/esnext.observable.js":"3xp42","core-js/modules/esnext.promise.any.js":"15oN5","core-js/modules/esnext.promise.try.js":"9aE03","core-js/modules/esnext.reflect.define-metadata.js":"3xwnG","core-js/modules/esnext.reflect.delete-metadata.js":"jkWht","core-js/modules/esnext.reflect.get-metadata.js":"5Zgvf","core-js/modules/esnext.reflect.get-metadata-keys.js":"fX8DH","core-js/modules/esnext.reflect.get-own-metadata.js":"kq25E","core-js/modules/esnext.reflect.get-own-metadata-keys.js":"gurcZ","core-js/modules/esnext.reflect.has-metadata.js":"56Sl7","core-js/modules/esnext.reflect.has-own-metadata.js":"jMv3l","core-js/modules/esnext.reflect.metadata.js":"4lDPc","core-js/modules/esnext.set.add-all.js":"fkak3","core-js/modules/esnext.set.delete-all.js":"eh9pt","core-js/modules/esnext.set.difference.js":"fXVcO","core-js/modules/esnext.set.every.js":"12AaV","core-js/modules/esnext.set.filter.js":"1xq88","core-js/modules/esnext.set.find.js":"68H6S","core-js/modules/esnext.set.from.js":"7bjCD","core-js/modules/esnext.set.intersection.js":"fxiKK","core-js/modules/esnext.set.is-disjoint-from.js":"2zMEm","core-js/modules/esnext.set.is-subset-of.js":"akLVm","core-js/modules/esnext.set.is-superset-of.js":"4cuoT","core-js/modules/esnext.set.join.js":"4sRdI","core-js/modules/esnext.set.map.js":"grqni","core-js/modules/esnext.set.of.js":"igsh6","core-js/modules/esnext.set.reduce.js":"96SwW","core-js/modules/esnext.set.some.js":"kpADq","core-js/modules/esnext.set.symmetric-difference.js":"dcNSS","core-js/modules/esnext.set.union.js":"kLiTR","core-js/modules/esnext.string.at.js":"ecwqe","core-js/modules/esnext.string.code-points.js":"5zWJs","core-js/modules/esnext.string.replace-all.js":"96wk7","core-js/modules/esnext.symbol.dispose.js":"4TP5X","core-js/modules/esnext.symbol.observable.js":"dZF6f","core-js/modules/esnext.symbol.pattern-match.js":"1w8Xo","core-js/modules/esnext.weak-map.delete-all.js":"9IHXD","core-js/modules/esnext.weak-map.from.js":"f0jtn","core-js/modules/esnext.weak-map.of.js":"1ugt1","core-js/modules/esnext.weak-set.add-all.js":"lkp2e","core-js/modules/esnext.weak-set.delete-all.js":"3fvRR","core-js/modules/esnext.weak-set.from.js":"fkXGG","core-js/modules/esnext.weak-set.of.js":"199Cr","./leaflet":"ejFb8","./updateSettings":"20I13","./stripe":"10VhC","./accountform":"es1yk","@parcel/transformer-js/src/esmodule-helpers.js":"h06wp"}],"k7rsR":[function(require,module,exports) {
@@ -6235,7 +6241,7 @@ const displayMap = (locations)=>{
     }).addTo(map);
     // Create icon using the image provided by Jonas
     var greenIcon = L.icon({
-        iconUrl: "/img/pin.png",
+        // iconUrl: '/img/pin.png',
         iconSize: [
             32,
             40
@@ -6393,11 +6399,11 @@ const logout = async (e)=>{
             method: "GET",
             url: "/api/v1/users/logout"
         });
-    // if (res.data.status === 'success') location.reload(true);
+        if (res.data.status === "success") location.reload(true);
     } catch (err) {
         (0, _alerts.showAlert)("error", "Error loggin out! Try again.");
     }
-// location.assign('/');
+    location.assign("/");
 };
 
 },{"./alerts":"lcmaX","@parcel/transformer-js/src/esmodule-helpers.js":"h06wp"}]},["c2fyx","1jV8P"], "1jV8P", "parcelRequire11c7")
