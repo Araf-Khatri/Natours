@@ -18,7 +18,7 @@ const displayMap = locations => {
 
   // Create icon using the image provided by Jonas
   var greenIcon = L.icon({
-    // iconUrl: '/img/pin.png',
+    iconUrl: '/img/pin.png',
     iconSize: [32, 40], // size of the icon
     iconAnchor: [16, 40], // point of the icon which will correspond to marker's location
     popupAnchor: [0, -50], // point from which the popup should open relative to the iconAnchor

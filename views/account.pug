@@ -12,8 +12,8 @@ block content
   main.main
     .user-view
       nav.user-view__menu
-        .close-menu.hidden
-          ion-icon(name="close")
+        .menu.close-menu.hidden
+          ion-icon(name="close-outline" class="close")
         ul.side-nav
           +navItem('/me', 'Settings', 'settings', true)
           +navItem('/my-tours', 'My Bookings', 'briefcase')
@@ -30,8 +30,8 @@ block content
               +navItem('#', 'Manage Bookings', 'briefcase')
 
       .user-view__content
-        .hidden.profile-menu
-          ion-icon(name="reorder-three")
+        .menu.profile-menu.hidden
+          ion-icon(name="menu-outline")
         .user-view__form-container
           h2.heading-secondary.ma-bt-md Your account settings
 

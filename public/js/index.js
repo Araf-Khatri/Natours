@@ -16,6 +16,7 @@ const userPasswordForm = document.querySelector('.form-user-password');
 const bookBtn = document.getElementById('book-tour');
 const accountBtn = document.querySelector('.account .nav__el--logout');
 const profileMenuBtn = document.querySelector('.profile-menu');
+const profileCloseMenuBtn = document.querySelector('.close-menu');
 
 // DELEGATION
 if (leaflet) {
@@ -115,10 +116,16 @@ if (accountOnMobile) {
   });
 }
 
-console.log('clicked')
 if (profileMenuBtn) {
   profileMenuBtn.addEventListener('click', () => {
-    const menu = document.querySelector('.user-view__menu')
-    menu.classList.toggle('user-menu-active')
+    const menu = document.querySelector('.user-view__menu');
+    menu.classList.toggle('user-menu-active');
+  });
+}
+
+if (profileCloseMenuBtn) {
+  profileCloseMenuBtn.addEventListener('click', () => {
+    const menu = document.querySelector('.user-view__menu');
+    menu.classList.remove('user-menu-active');
   })
 }
